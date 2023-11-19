@@ -11,16 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var colorView: UIView!
     
-    @IBOutlet var rSlider: UISlider! {
-        didSet {
-            rSlider.tintColor = UIColor.red
-        }
-    }
-    @IBOutlet var gSlider: UISlider! {
-        didSet {
-            gSlider.tintColor = UIColor.green
-        }
-    }
+    @IBOutlet var rSlider: UISlider!
+    @IBOutlet var gSlider: UISlider!
     @IBOutlet var bSlider: UISlider!
     
     @IBOutlet var rLabel: UILabel!
@@ -29,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorView.layer.cornerRadius = 10
     }
 
     func changeColor() {
